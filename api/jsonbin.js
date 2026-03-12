@@ -1,14 +1,14 @@
 export default async function handler(req, res) {
   const binId = process.env.JSONBIN_BIN_ID;
-  const accessKey = process.env.JSONBIN_ACCESS_KEY;
+  const masterKey = process.env.JSONBIN_MASTER_KEY;
 
-  if (!binId || !accessKey) {
+  if (!binId || !masterKey) {
     return res.status(500).json({ error: 'JSONBin not configured' });
   }
 
   if (req.method === 'GET') {
     const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
-      headers: { 'X-Access-Key': accessKey },
+      headers: { 'X-Master-Key': masterKey },
     });
     if (!response.ok) {
       return res.status(response.status).json({ error: `JSONBin read: ${response.status}` });
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        'X-Access-Key': accessKey,
+        'X-Master-Key': masterKey,
       },
       body: JSON.stringify(req.body),
     });
