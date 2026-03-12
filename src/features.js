@@ -80,23 +80,6 @@ export const initialFeatures = [
     ],
   },
   {
-    id: 'onboarding-copy',
-    title: 'In-App Onboarding (Nights 1–4)',
-    summary: 'Guided first-four-nights experience focused on fit education, expectation setting, and early churn signal detection.',
-    pillar: 'Confidence & Reliability',
-    status: 'Shipped',
-    targetDate: 'Q1 2026',
-    vision: `<p>The first four nights determine whether someone becomes a Smartbuds user or a Smartbuds returner. This onboarding sequence addresses the three biggest early churn drivers: poor fit, unrealistic expectations, and confusion about what the data means.</p>
-<p>Night 1 focuses exclusively on fit — getting the physical experience right before anything else. Night 2 introduces the first sleep report with guided interpretation. Nights 3–4 include Day 2/4 check-in screens with radio-pattern instrumentation to capture churn signals early enough to intervene.</p>`,
-    prototypes: [
-      { type: 'placeholder', label: 'Live App', content: 'Shipped — see live app' },
-    ],
-    defaultNotes: [
-      { date: '2026-02-12', author: 'Caitlin', text: 'Shipped to production. Monitoring Day 2/4 check-in completion rates.', tickets: [] },
-      { date: '2026-01-30', author: 'Caitlin', text: 'UX copy for all four nights finalized and handed to eng.', tickets: [] },
-    ],
-  },
-  {
     id: 'live-brainwaves',
     title: 'Live Brainwaves (Signal Visualizer)',
     summary: 'Real-time EEG visualization for user confidence and engagement — renamed from "Signal Visualizer" for consumer clarity.',
