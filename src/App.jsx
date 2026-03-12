@@ -169,6 +169,13 @@ function CardPreview({ prototype }) {
       </div>
     );
   }
+  if (prototype.type === 'video') {
+    return (
+      <div className="card-preview card-preview-video">
+        <video src={prototype.src} autoPlay loop muted playsInline />
+      </div>
+    );
+  }
   return (
     <div className="card-preview card-preview-placeholder">
       <div className="card-preview-icon">◇</div>
@@ -406,7 +413,7 @@ function PrototypeGallery({ prototypes }) {
 
   const typeLabel = (p) => {
     if (p.label) return p.label;
-    const labels = { figma: 'Figma', image: 'Screenshot', html: 'Interactive', placeholder: 'Placeholder' };
+    const labels = { figma: 'Figma', image: 'Screenshot', html: 'Interactive', placeholder: 'Placeholder', video: 'Video', iframe: 'Preview' };
     return labels[p.type] || p.type;
   };
 
@@ -445,6 +452,7 @@ function PrototypeEmbed({ prototype }) {
   if (prototype.type === 'figma') return <div className="prototype-area"><iframe src={`https://www.figma.com/embed?embed_host=nextsense&url=${encodeURIComponent(prototype.url)}`} allowFullScreen /></div>;
   if (prototype.type === 'html') return <div className="prototype-area"><iframe srcDoc={prototype.html} style={{ width: '100%', minHeight: '500px', border: 'none' }} /></div>;
   if (prototype.type === 'iframe') return <div className="prototype-area"><iframe src={prototype.url} style={{ width: '100%', minHeight: '700px', border: 'none' }} allowFullScreen /></div>;
+  if (prototype.type === 'video') return <div className="prototype-area prototype-area-video"><video src={prototype.src} autoPlay loop muted playsInline controls /></div>;
   return null;
 }
 

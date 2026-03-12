@@ -224,6 +224,10 @@ body::before {
 }
 .prototype-area img { max-width: 100%; height: auto; border-radius: var(--radius-sm); }
 .prototype-area iframe { width: 100%; min-height: 500px; border: none; border-radius: var(--radius-sm); }
+.prototype-area-video { background: #000; }
+.prototype-area video { max-width: 100%; max-height: 700px; border-radius: var(--radius-sm); }
+.card-preview-video { display: flex; align-items: center; justify-content: center; background: #000; }
+.card-preview-video video { height: 100%; width: auto; object-fit: contain; }
 .prototype-placeholder { text-align: center; padding: 40px; }
 .prototype-placeholder-icon {
   width: 48px; height: 48px; border-radius: 12px; background: var(--tag-bg);

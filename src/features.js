@@ -97,7 +97,8 @@ export const initialFeatures = [
 <p>Key framing principle: <em>brain-aware, not brain-optimized</em>. We show what happened — "see what your brain does during focused work" — not "boost your productivity." The value is self-awareness and curiosity, not performance claims.</p>
 <p>Two-phase rollout: React prototype first for internal validation, then SwiftUI translation into the existing session shell.</p>`,
     prototypes: [
-      { type: 'figma', label: 'Prototype', url: 'https://www.figma.com/make/zGFhN2u6Jpe6gjwuHgn8cT/Focus-Session-Design?t=KY6ESHCtnxdpQ7si-1&preview-route=%2Fconfigure' },
+      { type: 'video', label: 'iOS Demo', src: '/prototypes/focus-session-demo.mov' },
+      { type: 'figma', label: 'Figma Prototype', url: 'https://www.figma.com/make/zGFhN2u6Jpe6gjwuHgn8cT/Focus-Session-Design?t=KY6ESHCtnxdpQ7si-1&preview-route=%2Fconfigure' },
     ],
     defaultNotes: [
       { date: '2026-03-12', author: 'Caitlin', text: 'Feature brief complete. Two-phase plan: React prototype → SwiftUI. Dependencies: session shell (Duy), EEG engagement heuristic (algorithms), focus/break soundscapes (Robert Thomas).', tickets: [] },
