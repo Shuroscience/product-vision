@@ -80,6 +80,30 @@ export const initialFeatures = [
     ],
   },
   {
+    id: 'focus-pomodoro',
+    title: 'Focus Session (Pomodoro Mode)',
+    summary: 'Pomodoro-style timed focus with alternating work/break phases, brain-responsive soundscapes, and a post-session EEG activity report.',
+    pillar: 'Enduring Value',
+    status: 'Exploring',
+    targetDate: 'Q2 2026',
+    vision: `<p>Focus Session is the first daytime use case for Smartbuds — a Pomodoro-style structured focus mode that shifts the product identity from <em>sleep device you wear at night</em> to <em>brain-sensing platform you use throughout the day</em>.</p>
+<p>The strategic driver: users who hit comfort friction at night are churning before discovering the full value of brain-sensing earbuds. Focus Session creates a compelling daytime reason to keep the product, changing the retention equation even when nighttime comfort is still a work in progress.</p>
+<p>The feature layers on top of the existing session infrastructure (timer + soundscapes + post-session summary) and adds three things:</p>
+<ul>
+<li><strong>Pomodoro phase logic</strong> — alternating focus and break intervals (default: 25min focus / 5min break) with configurable durations and cycles</li>
+<li><strong>Audio transitions</strong> — dedicated focus vs. break soundscapes with a transition cue between phases</li>
+<li><strong>Post-session brain activity report</strong> — a 5-minute-increment EEG summary showing relative engagement across the session, derived from band power ratios (beta/alpha)</li>
+</ul>
+<p>Key framing principle: <em>brain-aware, not brain-optimized</em>. We show what happened — "see what your brain does during focused work" — not "boost your productivity." The value is self-awareness and curiosity, not performance claims.</p>
+<p>Two-phase rollout: React prototype first for internal validation, then SwiftUI translation into the existing session shell.</p>`,
+    prototypes: [
+      { type: 'placeholder', label: 'Prototype', content: 'React prototype in progress — Phase 1' },
+    ],
+    defaultNotes: [
+      { date: '2026-03-12', author: 'Caitlin', text: 'Feature brief complete. Two-phase plan: React prototype → SwiftUI. Dependencies: session shell (Duy), EEG engagement heuristic (algorithms), focus/break soundscapes (Robert Thomas).', tickets: [] },
+    ],
+  },
+  {
     id: 'live-brainwaves',
     title: 'Live Brainwaves (Signal Visualizer)',
     summary: 'Real-time EEG visualization for user confidence and engagement — renamed from "Signal Visualizer" for consumer clarity.',
