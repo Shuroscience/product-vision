@@ -137,9 +137,51 @@ function Gallery({ features, onSelect }) {
   );
 }
 
+function CardPreview({ prototype }) {
+  if (!prototype || prototype.type === 'placeholder') {
+    return (
+      <div className="card-preview card-preview-placeholder">
+        <div className="card-preview-icon">◇</div>
+      </div>
+    );
+  }
+  if (prototype.type === 'figma') {
+    return (
+      <div className="card-preview">
+        <iframe
+          src={`https://www.figma.com/embed?embed_host=nextsense&url=${encodeURIComponent(prototype.url)}`}
+          className="card-preview-iframe"
+          tabIndex={-1}
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+  if (prototype.type === 'iframe') {
+    return (
+      <div className="card-preview">
+        <iframe
+          src={prototype.url}
+          className="card-preview-iframe"
+          tabIndex={-1}
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+  return (
+    <div className="card-preview card-preview-placeholder">
+      <div className="card-preview-icon">◇</div>
+    </div>
+  );
+}
+
 function FeatureCard({ feature, onClick }) {
+  const firstProto = feature.prototypes?.[0] || null;
   return (
     <div className="feature-card" style={{ '--card-accent': accentMap[feature.status] }} onClick={onClick}>
+      <CardPreview prototype={firstProto} />
+      <div className="card-body">
       <div className="card-header"><div className="card-title">{feature.title}</div></div>
       <div className="card-summary">{feature.summary}</div>
       <div className="card-meta">
@@ -149,6 +191,7 @@ function FeatureCard({ feature, onClick }) {
         {feature.targetDate && <span className="ship-date">{feature.targetDate}</span>}
         <span className="pillar-tag">{feature.pillar}</span>
         {feature.noteCount > 0 && <span className="card-note-count">{feature.noteCount} note{feature.noteCount !== 1 ? 's' : ''}</span>}
+      </div>
       </div>
     </div>
   );
