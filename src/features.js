@@ -50,7 +50,7 @@ export const initialFeatures = [
 <p>The HealthKit integration enables before/after comparison: show how sleep metrics have shifted since starting Smartbuds, using the user's own pre-existing Apple Health data as a baseline.</p>
 <p>Critical guardrail: orthosomnia risk. We must frame benchmarks as context, not competition. No leaderboards, no "you're in the bottom 20%." Language like "your slow-wave activity is within a healthy range" rather than percentile rankings.</p>`,
     prototypes: [
-      { type: 'placeholder', label: 'Wireframes', content: 'Benchmarking UI wireframes in progress' },
+      { type: 'figma', label: 'Wireframes', url: 'https://www.figma.com/design/FldWyRNBLRJoDY0lWetmnN/Caitlin-s-Scratch-pad-March--26?node-id=2-7313&t=gKCYpmWjoq3rowD2-1' },
     ],
     defaultNotes: [
       { date: '2026-03-08', author: 'Caitlin', text: 'PRD v2 complete. Includes orthosomnia guardrail language guidelines.', tickets: [] },
