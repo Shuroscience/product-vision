@@ -32,7 +32,7 @@ export const initialFeatures = [
 <p>The Morning Pull-Up is a full-screen post-sleep summary that leads with slow-wave count as the hero metric — the one number that distinguishes us from every other tracker. Supporting stats (sleep time, efficiency, latency) sit below, providing context without competing for attention.</p>
 <p>Design principle: this screen should feel like a confident answer, not a data dump. Think weather app, not spreadsheet.</p>`,
     prototypes: [
-      { type: 'placeholder', label: 'Mockup', content: 'Morning Pull-Up mockup — see Figma link' },
+      { type: 'figma', label: 'Mockup', url: 'https://www.figma.com/design/FldWyRNBLRJoDY0lWetmnN/Caitlin-s-Scratch-pad-March--26?node-id=121-3165&t=gKCYpmWjoq3rowD2-1' },
     ],
     defaultNotes: [
       { date: '2026-03-05', author: 'Caitlin', text: 'UX copy finalized. Hero stat: slow-wave count with delta indicator.', tickets: [] },
