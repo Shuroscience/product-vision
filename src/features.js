@@ -106,7 +106,7 @@ export const initialFeatures = [
     vision: `<p>"Live Brainwaves" serves a trust-building function more than a data function. When users can see their brain activity moving in real time, it answers the fundamental question: "is this thing actually working?"</p>
 <p>Renamed from "Signal Visualizer" because consumer users don't think in terms of "signal" — they think in terms of "my brain." The visualization is intentionally simplified: smooth waveforms, not raw EEG noise. Designed to inspire confidence, not anxiety.</p>`,
     prototypes: [
-      { type: 'placeholder', label: 'Live App', content: 'Shipped — see live app' },
+      { type: 'iframe', label: 'Interactive Prototype', url: '/prototypes/live-brainwaves.html' },
     ],
     defaultNotes: [
       { date: '2026-01-20', author: 'Caitlin', text: 'Renamed from Signal Visualizer. Shipped in v1.4.', tickets: [] },

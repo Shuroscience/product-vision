@@ -401,6 +401,7 @@ function PrototypeEmbed({ prototype }) {
   if (prototype.type === 'image') return <div className="prototype-area"><img src={prototype.src} alt={prototype.alt || 'Prototype'} /></div>;
   if (prototype.type === 'figma') return <div className="prototype-area"><iframe src={`https://www.figma.com/embed?embed_host=nextsense&url=${encodeURIComponent(prototype.url)}`} allowFullScreen /></div>;
   if (prototype.type === 'html') return <div className="prototype-area"><iframe srcDoc={prototype.html} style={{ width: '100%', minHeight: '500px', border: 'none' }} /></div>;
+  if (prototype.type === 'iframe') return <div className="prototype-area"><iframe src={prototype.url} style={{ width: '100%', minHeight: '700px', border: 'none' }} allowFullScreen /></div>;
   return null;
 }
 
